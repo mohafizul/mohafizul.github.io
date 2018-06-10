@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         kramdown
-remote_theme: mdo/poole-hyde
+remote_theme: mdo/hyde
 plugins:
   - jekyll-feed
   # - jekyll-paginate
