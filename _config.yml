@@ -3,7 +3,7 @@ markdown:         kramdown
 remote_theme: mdo/poole-hyde
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+  # - jekyll-paginate
 
 # Setup
 title:            Process Eng.
