@@ -8,9 +8,9 @@ plugins:
 # Setup
 title: Process Eng.
 tagline:          'A Jekyll theme'
-description:      'Technical Lesson Learnt & Random Observations'
+description:      'Technical Lessons Learnt & Random Observations'
 email: your-email@example.com
-baseurl: / # the subpath of your site, e.g. /blog
+baseurl: https://mohafizul.github.io/ # the subpath of your site, e.g. /blog
 paginate:            5
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
