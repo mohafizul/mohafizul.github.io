@@ -6,7 +6,7 @@ plugins:
   # - jekyll-paginate
 
 # Setup
-title:            Process Eng.
+title: Process Eng.
 tagline:          'A Jekyll theme'
 description:      'Technical Lesson Learnt & Random Observations'
 email: your-email@example.com
