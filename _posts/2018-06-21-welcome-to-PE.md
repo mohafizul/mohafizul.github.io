@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Welcome to P.Eng"
+title:  "Welcome to Process Eng."
 date:   2018-06-21 08:30:00 +0800
 categories: general
 ---
 Hello There!  
 
-Welcome to P.Eng blog, the place where I'll share my lessons learnt, tips and observations over many years of my career as a process engineer.  
+Welcome to Process Eng. blog, the place where I'll share my lessons learnt, tips and observations over many years of my career as a process engineer.  
 
 Most of the posts would be related to the downstream oil and gas engineering, from engineering drawings like PFD & P&ID, equipment sizing,
 meetings like HAZOP to technical write-ups such as control narrative and safeguarding memorandum. Since I'm also involved in commissioning

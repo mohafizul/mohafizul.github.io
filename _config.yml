@@ -3,6 +3,7 @@ markdown:         kramdown
 remote_theme: mdo/hyde
 plugins:
   - jekyll-feed
+  # - jekyll-gist
   # - jekyll-paginate
 
 # Setup
