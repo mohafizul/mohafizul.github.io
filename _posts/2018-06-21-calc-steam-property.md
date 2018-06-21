@@ -18,27 +18,19 @@ where;
 
 Let's compare the pressure with this calculation with env1 and env2  
 
-|Pres.(barA)|T double sqroot<br>(degC)|T Env1<br>(degC)|Error %|T Env2<br>(degC)|Error%|
+|Pres.<br>(barA)|T double sqroot<br>(degC)|T Env1<br>(degC)|Error %|T Env2<br>(degC)|Error%|
 |---|---|---|---|---|---|
 |0||||||
 |1||||||
 |2||||||
-|3||||||
 |4||||||
-|5||||||
 |6||||||
-|7||||||
 |8||||||
-|9||||||
 |10||||||
 |20||||||
-|30||||||
 |40||||||
-|50||||||
 |60||||||
-|70||||||
 |80||||||
-|90||||||
 |100||||||
 |120||||||
 |140||||||
