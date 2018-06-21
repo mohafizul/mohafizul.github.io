@@ -13,3 +13,5 @@ categories: Rule of Thumb
         Click Me!
     </h4>
 </div>
+
+<canvas id="popChart" width="600" height="400"></canvas>
