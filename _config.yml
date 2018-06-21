@@ -7,7 +7,7 @@ plugins:
 
 # Setup
 title: Process Eng.
-tagline:          'A Jekyll theme'
+tagline:          
 description:      'Technical Lessons Learnt & Random Observations'
 email: your-email@example.com
 baseurl: https://mohafizul.github.io/ # the subpath of your site, e.g. /blog
