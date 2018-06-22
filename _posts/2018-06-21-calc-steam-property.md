@@ -4,7 +4,7 @@ custom_js:
     -   jquery
     -   jscript
     -   chart.js
-title:  "Using Double Square Root to obtain Saturated Steam Temperature"
+title:  "Using Double Square Root Formula to obtain Saturated Steam Temperature"
 date:   2018-06-21 15:30:00 +0800
 categories: Rule of Thumb
 ---
@@ -38,7 +38,7 @@ This is how it compares when plotted:
 
 <canvas id="popChart" width="600" height="400"></canvas>  
 
-So with plant saturated steam usually is between 5 barG to 50 barG, the formula can give values at negligible different compare to APWS-IF97.  
+So with plant saturated steam usually is between 5 barG to 50 barG, the formula can give values at negligible difference compare to APWS-IF97.  
 
 |Steam Type|Pressure. (barG)|Pressure (barA)|
 |---------|---|---|
