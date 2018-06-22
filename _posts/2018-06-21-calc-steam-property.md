@@ -21,7 +21,7 @@ where;
 ```  
 Comparing the double square root formula with APWS-IF97 as per table below, the errors are negligible (less than 2%).  
 
-|Pres.<br>(barA)|T IF97<br>(degC)|T double sqroot<br>(degC)|Error %|
+|Sat. Steam Pres.<br>(barA)|Temp w/ IF97<br>(degC)|Temp w/ double sqroot<br>(degC)|Error %|
 |---|---|---|---|
 |1|99.606|100.000|0.40|
 |2|120.212|118.921|1.07|
@@ -38,7 +38,8 @@ Comparing the double square root formula with APWS-IF97 as per table below, the 
 This is how it fares when plotted:  
 
 <canvas id="popChart" width="600" height="400"></canvas>  
-
+  
+  
 So with plant saturated steam usually is between 5 barG to 50 barG, the formula can perform well at negligible difference compare to APWS-IF97.  
 
 |Steam Type|Pressure (barG)|Pressure (barA)|
