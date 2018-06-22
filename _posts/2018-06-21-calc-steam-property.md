@@ -4,14 +4,13 @@ custom_js:
     -   jquery
     -   jscript
     -   chart.js
-title:  "Double Square Root to Get Saturated Steam Temperature"
+title:  "Using Double Square Root to obtain Saturated Steam Temperature"
 date:   2018-06-21 15:30:00 +0800
 categories: Rule of Thumb
 ---
-Steam properties usually obtain by using The International Association for The Properties of Water & Steam, IAPWS-IF97 formulas. 
-However this formula usually required an app, software, printed table or excel adds on. These tools usually are not available during 
-meeting and discussion, to get a fast and fairly accurate estimation for saturated steam pressure and temperature, a simple double 
-square root method below can be used:  
+Steam properties usually obtain by using The International Association for The Properties of Water & Steam, IAPWS-IF97 formula. 
+To use this formula may require an app, software, printed table or excel adds on. These tools usually are not available during 
+meeting and discussion, so to get a fast estimation with acceptable accuracy, a simple double square root formula below can be used:  
 
 ```phyton
 Tsat = [(P^0.5)^0.5]x100
@@ -27,7 +26,7 @@ Comparing the double square root formula results above with APWS-IF97 as per tab
 |2|120.212|118.921|1.07|
 |4|143.613|141.421|1.53|
 |6|158.832|156.508|1.46|
-|8|170.414|168.179||1.31|
+|8|170.414|168.179|1.31|
 |10|179.886|177.828|1.14|
 |20|212.385|211.474|0.43|
 |40|250.358|251.487|0.45|
@@ -35,18 +34,14 @@ Comparing the double square root formula results above with APWS-IF97 as per tab
 |80|295.009|299.070|1.38|
 |100|310.999|316.228|1.68|  
 
-This is how it compares if plotted:  
+This is how it compares when plotted:  
 
 <canvas id="popChart" width="600" height="400"></canvas>  
 
-This is how it compares if plotted:
-
-Graph
-
-So with plant saturated steam usually is between 5 barG to 50 barG, the formula could be very useful.  
+So with plant saturated steam usually is between 5 barG to 50 barG, the formula can give values at negligible different compare to APWS-IF97.  
 
 |Steam Type|Pressure. (barG)|Pressure (barA)|
 |---------|---|---|
-|Low pressure (sat)|5.5|4.5|
-|Desuperheated Medium Pressure|17|16|
-|Desuperheated High pressure|47|46|
+|Low Pressure (sat) Steam|5.5|4.5|
+|Desuperheated Medium Pressure Steam|17|16|
+|Desuperheated High Pressure Steam|47|46|
