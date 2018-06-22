@@ -15,8 +15,9 @@ meeting and discussion, so to get a fast estimation with acceptable accuracy, a 
 ```phyton
 Tsat = [(P^0.5)^0.5]x100
 where;
-    P   = Abs. Pressure (barA)
-    Tsat= Absolute Temperature (degC)
+    P   = Saturated Steam Pressure (barA)
+    Tsat= Saturated Steam Temperature (degC)
+    Note: the pressure is in abs not gauge.
 ```  
 Comparing the double square root formula results above with APWS-IF97 as per table below, the errors are negligible (less than 2%).  
 
