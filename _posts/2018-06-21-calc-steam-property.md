@@ -9,7 +9,7 @@ date:   2018-06-21 15:30:00 +0800
 categories: Rule of Thumb
 ---
 Steam properties usually obtain by using The International Association for The Properties of Water & Steam, IAPWS-IF97 formula. 
-This formula usually use through an app, software, printed table or excel adds on. These tools usually are not available during 
+This formula usually used through an app, software, printed table or excel adds on. These tools usually are not available during 
 meeting and discussion or at site, so to get a fast estimation with acceptable accuracy, a simple double square root formula below can be used:  
 
 ```phyton
