@@ -9,8 +9,8 @@ date:   2018-06-21 15:30:00 +0800
 categories: Rule of Thumb
 ---
 Steam properties usually obtain by using The International Association for The Properties of Water & Steam, IAPWS-IF97 formula. 
-To use this formula may require an app, software, printed table or excel adds on. These tools usually are not available during 
-meeting and discussion, so to get a fast estimation with acceptable accuracy, a simple double square root formula below can be used:  
+This formula usually use through an app, software, printed table or excel adds on. These tools usually are not available during 
+meeting and discussion or at site, so to get a fast estimation with acceptable accuracy, a simple double square root formula below can be used:  
 
 ```phyton
 Tsat = [(P^0.5)^0.5]x100
@@ -19,7 +19,7 @@ where;
     Tsat= Saturated Steam Temperature (degC)
     Note: the pressure is in abs not gauge.
 ```  
-Comparing the double square root formula results above with APWS-IF97 as per table below, the errors are negligible (less than 2%).  
+Comparing the double square root formula with APWS-IF97 as per table below, the errors are negligible (less than 2%).  
 
 |Pres.<br>(barA)|T IF97<br>(degC)|T double sqroot<br>(degC)|Error %|
 |---|---|---|---|
@@ -35,13 +35,13 @@ Comparing the double square root formula results above with APWS-IF97 as per tab
 |80|295.009|299.070|1.38|
 |100|310.999|316.228|1.68|  
 
-This is how it compares when plotted:  
+This is how it fares when plotted:  
 
 <canvas id="popChart" width="600" height="400"></canvas>  
 
-So with plant saturated steam usually is between 5 barG to 50 barG, the formula can give values at negligible difference compare to APWS-IF97.  
+So with plant saturated steam usually is between 5 barG to 50 barG, the formula can perform well at negligible difference compare to APWS-IF97.  
 
-|Steam Type|Pressure. (barG)|Pressure (barA)|
+|Steam Type|Pressure (barG)|Pressure (barA)|
 |---------|---|---|
 |Low Pressure (sat) Steam|5.5|4.5|
 |Desuperheated Medium Pressure Steam|17|16|
