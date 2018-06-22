@@ -4,40 +4,49 @@ custom_js:
     -   jquery
     -   jscript
     -   chart.js
-title:  "Easy Calculation to Get Steam Property"
+title:  "Double Square Root to Get Saturated Steam Temperature"
 date:   2018-06-21 15:30:00 +0800
 categories: Rule of Thumb
 ---
-To get steam saturation temperature at given pressure
+Steam properties usually obtain by using The International Association for The Properties of Water & Steam, IAPWS-IF97 formulas. 
+However this formula usually required an app, software, printed table or excel adds on. These tools usually are not available during 
+meeting and discussion, to get a fast and fairly accurate estimation for saturated steam pressure and temperature, a simple double 
+square root method below can be used:  
+
 ```phyton
-Tsat = [(P^1/2)^1/2]x100
+Tsat = [(P^0.5)^0.5]x100
 where;
     P   = Abs. Pressure (barA)
     Tsat= Absolute Temperature (degC)
 ```  
+Comparing the double square root formula results above with APWS-IF97 as per table below, the errors are negligible (less than 2%).  
 
-Let's compare the pressure with this calculation with env1 and env2  
-
-|Pres.<br>(barA)|T double sqroot<br>(degC)|T Env1<br>(degC)|Error %|T Env2<br>(degC)|Error%|
+|Pres.<br>(barA)|T IF97<br>(degC)|T double sqroot<br>(degC)|Error %|
 |---|---|---|---|---|---|
-|0||||||
-|1||||||
-|2||||||
-|4||||||
-|6||||||
-|8||||||
-|10||||||
-|20||||||
-|40||||||
-|60||||||
-|80||||||
-|100||||||
-|120||||||
-|140||||||
-|160||||||
-|180||||||
-|200||||||
+|1|99.606|100.000|0.40||
+|2|120.212|118.921|1.07|
+|4|143.613|141.421|1.53|
+|6|158.832|156.508|1.46|
+|8|170.414|168.179||1.31|
+|10|179.886|177.828|1.14|
+|20|212.385|211.474|0.43|
+|40|250.358|251.487|0.45|
+|60|275.586|278.316|0.99|
+|80|295.009|299.070|1.38|
+|100|310.999|316.228|1.68|  
 
-Let's plot the graph to see the different  
+This is how it compares if plotted:  
 
-<canvas id="popChart" width="600" height="400"></canvas>
+<canvas id="popChart" width="600" height="400"></canvas>  
+
+This is how it compares if plotted:
+
+Graph
+
+So with plant saturated steam usually is between 5 barG to 50 barG, the formula could be very useful.  
+
+|Steam Type|Pressure. (barG)|Pressure (barA)|
+|---------|---|---|
+|Low pressure (sat)|5.5|4.5|
+|Desuperheated Medium Pressure|17|16|
+|Desuperheated High pressure|47|46|
