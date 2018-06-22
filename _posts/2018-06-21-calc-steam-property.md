@@ -22,8 +22,8 @@ where;
 Comparing the double square root formula results above with APWS-IF97 as per table below, the errors are negligible (less than 2%).  
 
 |Pres.<br>(barA)|T IF97<br>(degC)|T double sqroot<br>(degC)|Error %|
-|---|---|---|---|---|---|
-|1|99.606|100.000|0.40||
+|---|---|---|---|
+|1|99.606|100.000|0.40|
 |2|120.212|118.921|1.07|
 |4|143.613|141.421|1.53|
 |6|158.832|156.508|1.46|
