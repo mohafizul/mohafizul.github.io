@@ -8,7 +8,7 @@ title:  "Using Double Square Root Formula to obtain Saturated Steam Temperature"
 date:   2018-06-21 15:30:00 +0800
 categories: Tips
 ---
-Steam properties usually obtained from The International Association for The Properties of Water & Steam IAPWS-IF97 formula. 
+Steam properties are usually obtained from The International Association for The Properties of Water & Steam IAPWS-IF97 formula. 
 This formula usually applied through an app, software, printed table or excel adds on. These tools usually are not available during 
 meeting and discussion or at site, so to get a fast estimation with acceptable accuracy, a simple double square root formula below can be used:  
 
