@@ -1,6 +1,6 @@
 title: Still Entropy by Hafizul
 author:
-  name: Hafizul Abdullah
+  name: 2025 Hafizul Abdullah
 theme: minima
 
 show_excerpts: true
@@ -16,5 +16,6 @@ header_pages:
   - about.md
 
 social_links:
-  - icon: linkedin
-  - url: "https://www.linkedin.com/in/mohafizul/"
+  - title: linkedin Hafizul Abdullah
+    icon: linkedin
+    url: "https://www.linkedin.com/in/mohafizul/"
