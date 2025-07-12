@@ -1,0 +1,16 @@
+title: Still Entropy
+author: Hafizul Abdullah
+description: Process Engineering, Commissioning & Operation Notes by Hafizul Abdullah
+theme: minima
+
+show_excerpts: true
+markdown: kramdown
+paginate: 5
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+header_pages:
+  - about.mdheader_pages:
+  - about.md
