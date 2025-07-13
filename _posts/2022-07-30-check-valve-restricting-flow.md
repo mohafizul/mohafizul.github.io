@@ -20,4 +20,4 @@ To convince Owner that the root cause was still the check valve, we searched for
 
 As shown in the snapshot below, plug type check valve does restricting the flow even when the plug is "fully lifted-off" by the upstream pressure. If this type of check valve is selected, Process & Piping team should confirm the pressure drop with vendor to evaluate if it will be restricting the flow.
 
-![You All Along](/assets/images/figure-3.png)
+![Check Valve Snapshot](/assets/images/figure-3.png)
