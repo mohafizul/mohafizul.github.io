@@ -3,6 +3,9 @@ author:
   name: 2025 Hafizul Abdullah
 theme: minima
 
+url: "https://stillentropy.com"
+baseurl: ""
+
 show_excerpts: true
 markdown: kramdown
 paginate: 5
