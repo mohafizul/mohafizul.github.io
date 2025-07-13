@@ -6,13 +6,13 @@ categories: Commissioning
 ---
 When developing a Mechanical Run Test procedure, pump curves are usually attached as a part of the procedure. When plotting the head against flow, a typical centrifugal pump curve usually indicates a smooth decreasing trend (fig. 1).
 
-![Pump Curve](../assets/images/figure-1.png)
+![Pump Curve](/assets/images/figure-1.png)
 
 Figure. 1 - Typical Pump Curve
 
 However, there are instances where the pump curve provided by the manufacturer exhibits a rising, peaking, and falling trend (fig.2). This kind of pump characteristic, which we usually refer to as 'drooping' or 'hunchback', can cause few problems during pump switching operations if not carefully addressed. 
 
-![Pump Curve](../assets/images/figure-2.png)
+![Pump Curve](/assets/images/figure-2.png)
 
 Figure. 2 - Hunchback or Drooping Curve (8270-P-101B)
 
