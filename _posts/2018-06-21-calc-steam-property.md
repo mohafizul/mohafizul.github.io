@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "Using Double Square Root Formula to obtain Saturated Steam Temperature"
+title:  "Quickly find steam saturated temperature when the pressure is known by using double square root method"
 date:   2018-06-21 15:30:00 +0800
 categories: Tips
 ---
-Steam properties are usually obtained from The International Association for The Properties of Water & Steam IAPWS-IF97 formula. 
-This formula usually applied through an app, software, printed table or excel adds on. These tools usually are not available during 
-meeting and discussion or at site, so to get a fast estimation with acceptable accuracy, a simple double square root formula below can be used:  
+Probably you sit in a meeting and you need to quickly estimate the temperature of saturated steam using a calculator instead of finding it in a steam table such as the IAPWS-IF97 formula. You could actually do that pretty accurately by doubling the square root of that steam pressure in barA as shown below: 
 
 ```phyton
 Tsat = [(P^0.5)^0.5]x100
@@ -15,7 +13,7 @@ where;
     Tsat= Saturated Steam Temperature (degC)
     Note: the pressure is in abs not gauge.
 ```  
-Comparing the double square root formula with APWS-IF97 as per table below, the errors are negligible (less than 2%).  
+Now let's check how acceptable this method is vs IF97. 
 
 |Sat. Steam Pres.<br>(barA)|Temp w/ IF97<br>(degC)|Temp w/ double sqroot<br>(degC)|Error %|
 |---|---|---|---|
@@ -31,8 +29,8 @@ Comparing the double square root formula with APWS-IF97 as per table below, the 
 |80|295.009|299.070|1.38|
 |100|310.999|316.228|1.68|  
 
-
-So with plant saturated steam usually is between 5 barG to 50 barG, the formula can perform well at negligible difference compare to APWS-IF97.  
+The error is less than 2%! Pretty reliable.
+Bonus reference: Typical saturated steam condition from the plant utility.  
 
 |Steam Type|Pressure (barG)|Pressure (barA)|
 |---------|---|---|
