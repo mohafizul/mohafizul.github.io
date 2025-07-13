@@ -11,11 +11,11 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-header_pages:
-  - about.mdheader_pages:
-  - about.md
+header_pages: about.md
 
 social_links:
   - title: linkedin Hafizul Abdullah
     icon: linkedin
     url: "https://www.linkedin.com/in/mohafizul/"
+
+hide_site_feed_link: true
