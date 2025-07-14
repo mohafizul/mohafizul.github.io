@@ -14,7 +14,9 @@ After performing pressure survey to these troubled pumps, we could narrow down t
 
 It's not easy to convince the Plant Owner on our suspicion. They claimed after so many years operating the plant they never had any check valves restricting the flow. Our proposal to remove the spring and plug inside the check valve was rejected after risk assessment because by doing so, the standby pump will lose its reverse flow protection. The best option available to us was to change the check valve spring to a less rigid type. Unfortunately, after conducting a pump test run with a softer spring, no significant improvement was observed. Owner became more confident that the flow issues had nothing to do with check valve selection. We also unchoked the line with spring wire to eliminate any debris inside the line, but to no avail. 
 
-To convince Owner that the root cause was still the check valve, we searched for the same check valve in the warehouse & tore down every part of the check valve. Full lift-off check valve plug, with spring compressed to its minimum length only allows small flow of liquid to pass through as shown in Figure 1. Client was convinced this time and allowed us to remove the plug and spring for a test run. The flow improved and root cause confirmed.
+To convince Owner that the root cause was still the check valve, we searched for the same check valve in the warehouse & tore down every part of the check valve. Full lift-off check valve plug, with spring compressed to its minimum length only allows small flow of liquid to pass through as shown in the snapshot. Client was convinced this time and allowed us to remove the plug and spring for a test run. 
+
+The flow improved and root cause confirmed.
 
 ![You All Along](/assets/images/figure-4.png)
 
