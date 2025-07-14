@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Calculating the Axial Positions Trip Set Points from a Pump Axial Positions Datasheet"
-date: 2022-08-11 15:10:15 +0800
+date: 2023-08-23 15:10:15 +0800
 categories: Commissioning
 ---
 
