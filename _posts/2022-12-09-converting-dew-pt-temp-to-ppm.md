@@ -82,7 +82,7 @@ For the temperature range -65°C to +0.01°C, the Magnus equation provided below
 
 <div>$$\ln ei(t) = \ln 611.2 + \frac{22.46t}{272.62 + t}$$</div>
 
-<h3>Calculator: Dew Point to Vapor Pressure</h3>
+<h3>Step 1: Obtain Vapor Pressure at the Dew Point</h3>
 
 When the dew point temperature is obtained by the dew point meters, water vapor pressure could be estimated using the Magnus equations shown above, as demonstrated below.
 
@@ -107,7 +107,7 @@ When the dew point temperature is obtained by the dew point meters, water vapor 
   </div>
 </div>
 <p></p>
-<h3>Calculator: Vapor Pressure to PPM</h3>
+<h3>Step 2: Calculate the Moisture in PPM</h3>
 
 Since PPM by volume is a ratio of partial pressure to total pressure in a million, the known vapor pressure (partial pressure) from the above calculation can be used in the equation below. In this formula, the total pressure refers to the line pressure during the measurement. The calculator below is linked to the result from the water vapor pressure calculator mentioned above.
 
@@ -134,7 +134,7 @@ Since PPM by volume is a ratio of partial pressure to total pressure in a millio
 <p></p>
 The consistency of the results from calculations above are consistent with [Linde's Dew Point Chart](https://www.lindedirect.com/resources/technical-information/dew-point). By using calculation instead of chart, the dew point could be estimated at any line pressure, as chart is usually limited to a certain line pressure (760 Torr / 0 barG as shown in Linde's Chart).
 
-<h3>Calculator: PPM to Dew Point</h3>
+<h3>Moisture in PPM to Dew Point in DegC</h3>
 
 With the same understanding of how the dew point temperature can be converted to ppmv, we can utilize the same formula to convert ppmv back to dew point temperature, as demonstrated below. This conversion is particularly useful when employing the tube sampling method for dew point checks, as tube sampling typically provides readings in ppmv, and having the equivalent reading in dew point temperature is very useful.
 
