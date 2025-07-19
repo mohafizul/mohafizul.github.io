@@ -8,127 +8,141 @@ categories: Operation
 <script type="text/javascript" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
-integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtead2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 <script>
-$(document).ready(function() {
-  $("#linedewpoint").keyup(function(){
-    var F13  = parseFloat($("#linedewpoint").val());
-    if(F13>0){
-      $("#vaporpressure").val((Math.exp(Math.log(611.2) + (17.62*F13)/(243.12+F13))).toFixed(2));
-      F15 = Math.exp(Math.log(611.2) + (17.62*F13)/(243.12+F13));	
-      var F16  = parseFloat($("#linepressure").val());
-      if($.isNumeric(F16)&&$.isNumeric(F15)){
-        $("#ppmv").val(((1000000*F15)/(101325+F16*100000)).toFixed(2));
-      }else{
-        $("#ppmv").val("");
-      };
-    }else if(F13<1){
-      $("#vaporpressure").val((Math.exp(Math.log(611.2) + (22.46*F13)/(272.62+F13))).toFixed(2));
-      F15 = Math.exp(Math.log(611.2) + (22.46*F13)/(272.62+F13));
-      if($.isNumeric(F16)&&$.isNumeric(F15)){
-        $("#ppmv").val(((1000000*F15)/(101325+F16*100000)).toFixed(2));
-      }else{
-        $("#ppmv").val("");
-      };
-    }else{
-      $("#vaporpressure").val("")
-      F15="";
-      $("#ppmv").val("");
-    };			
+$(document).ready(function () {
+  $("#linedewpoint").keyup(function () {
+    var F13 = parseFloat($("#linedewpoint").val());
+    if (F13 >= 0) {
+      $("#vaporpressure").val((Math.exp(Math.log(611.2) + (17.62 * F13) / (243.12 + F13))).toFixed(2));
+    } else if (F13 < 0) {
+      $("#vaporpressure").val((Math.exp(Math.log(611.2) + (22.46 * F13) / (272.62 + F13))).toFixed(2));
+    }
+    var F15 = parseFloat($("#linepressure").val());
+    var F16 = parseFloat($("#vaporpressure").val());
+    if (!isNaN(F15) && !isNaN(F16)) {
+      $("#ppmv").val(((1000000 * F16) / ((F15 + 1.01325) * 100000)).toFixed(2));
+    }
   });
 
-  $("#linepressure").keyup(function(){
-    var F16  = parseFloat($("#linepressure").val());
-    if($.isNumeric(F16)&&$.isNumeric(F15)){
-      $("#ppmv").val(((1000000*F15)/(101325+F16*100000)).toFixed(2));
-    }else{
-      $("#ppmv").val("");
-    };
+  $("#linepressure,#vaporpressure").keyup(function () {
+    var F15 = parseFloat($("#linepressure").val());
+    var F16 = parseFloat($("#vaporpressure").val());
+    if (!isNaN(F15) && !isNaN(F16)) {
+      $("#ppmv").val(((1000000 * F16) / ((F15 + 1.01325) * 100000)).toFixed(2));
+    }
   });
 
-  $("#linepres").keyup(function(){
-    var F30  = parseFloat($("#linepres").val());
-    var F31  = parseFloat($("#hppmv").val());
-    var F32  = F31*(101325+F30*100000)/1000000
-    if($.isNumeric(F30)&&$.isNumeric(F31)&&F32>611.2){
-      $("#dewpoint").val((243.12*Math.log(F32/611.2)/(17.62-Math.log(F32/611.2))).toFixed(2));
-    }else if(($.isNumeric(F30)&&$.isNumeric(F31)&&F32<=611.2)){
-      $("#dewpoint").val((272.62*Math.log(F32/611.2)/(22.46-Math.log(F32/611.2))).toFixed(2));
-    }else{
-      $("#dewpoint").val("");
-    };
-  });
-
-  $("#hppmv").keyup(function(){
-    var F30  = parseFloat($("#linepres").val());
-    var F31  = parseFloat($("#hppmv").val());
-    var F32  = F31*(101325+F30*100000)/1000000
-    if($.isNumeric(F30)&&$.isNumeric(F31)&&F32>611.2){
-      $("#dewpoint").val((243.12*Math.log(F32/611.2)/(17.62-Math.log(F32/611.2))).toFixed(2));
-    }else if(($.isNumeric(F30)&&$.isNumeric(F31)&&F32<=611.2)){
-      $("#dewpoint").val((272.62*Math.log(F32/611.2)/(22.46-Math.log(F32/611.2))).toFixed(2));
-    }else{
-      $("#dewpoint").val("");
-    };
+  $("#linepressure2,#ppmv2").keyup(function () {
+    var F22 = parseFloat($("#linepressure2").val());
+    var F23 = parseFloat($("#ppmv2").val());
+    if (!isNaN(F22) && !isNaN(F23)) {
+      var partial = (F23 * ((F22 + 1.01325) * 100000)) / 1000000;
+      var ln = Math.log(partial);
+      var dewpoint = -1;
+      if (partial > 0) {
+        var guess = -50;
+        for (var t = -100; t <= 60; t += 0.01) {
+          var ei = Math.log(611.2) + (22.46 * t) / (272.62 + t);
+          var ew = Math.log(611.2) + (17.62 * t) / (243.12 + t);
+          var calc = t < 0 ? ei : ew;
+          if (Math.abs(calc - ln) < 0.001) {
+            dewpoint = t;
+            break;
+          }
+        }
+        if (dewpoint !== -1) {
+          $("#dewpoint2").val(dewpoint.toFixed(2));
+        }
+      }
+    }
   });
 });
 </script>
 
-## Converting Temperature to ppm and vice versa for Dew Point Measurement
+<h2>Converting Temperature to ppm and vice versa for Dew Point Measurement.</h2>
 
-This post explores how to convert between temperature (dew point) and ppm (parts per million) using thermodynamic principles and empirical equations.
+<p>Commissioning a cryogenic system in a plant that handles ethylene or propylene requires a process known as ‘system drying.’ System drying is an activity conducted before introducing cryogenic fluids to the system...</p>
 
-We start from basic psychrometric formulas and bring it into real-world engineering practices using the calculator embedded below.
+<h3>Magnus Equation</h3>
+<p>For the temperature range of -45°C to +60°C:</p>
+<div>$$\ln ew(t) = \ln 611.2 + \frac{17.62t}{243.12 + t}$$</div>
+<p>For the temperature range -65°C to +0.01°C:</p>
+<div>$$\ln ei(t) = \ln 611.2 + \frac{22.46t}{272.62 + t}$$</div>
 
----
-
-### Calculator: Dew Point to Vapor Pressure
-
-```html
+<h3>Calculator: Dew Point to Vapor Pressure</h3>
 <div class="container">
   <div class="row">
-    <div class="col-auto p-0">				
-      <form class="form">			
+    <div class="col-auto p-0">
+      <form class="form">
         <div class="form-group row">
           <label for="linedewpoint" class="col-6 col-form-label">Line Dew Point (°C)</label>
           <div class="col-6">
-            <input type="LDP" class="form-control" id="linedewpoint" placeholder="Dewpoint">
+            <input type="text" class="form-control" id="linedewpoint" placeholder="Dewpoint">
           </div>
-        </div>				
-        <div class="form-group row">				
+        </div>
+        <div class="form-group row">
           <label for="vaporpressure" class="col-6 col-form-label">Vapor Pressure (Pa)</label>
           <div class="col-6">
-            <input type="vapres" class="form-control" id="vaporpressure" placeholder="Result">
+            <input type="text" class="form-control" id="vaporpressure" placeholder="Result">
           </div>
-        </div>				
-      </form>          
+        </div>
+      </form>
     </div>
-  </div>		
+  </div>
 </div>
-```
 
----
+<h3>Calculator: Vapor Pressure to PPM</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-auto p-0">
+      <form class="form">
+        <div class="form-group row">
+          <label for="linepressure" class="col-6 col-form-label">Line Pressure (barG)</label>
+          <div class="col-6">
+            <input type="text" class="form-control" id="linepressure" placeholder="Line Pressure">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="ppmv" class="col-6 col-form-label">PPM(v)</label>
+          <div class="col-6">
+            <input type="text" class="form-control" id="ppmv" placeholder="Result">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-### LaTeX Formula Sample
+<h3>Calculator: PPM to Dew Point</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-auto p-0">
+      <form class="form">
+        <div class="form-group row">
+          <label for="linepressure2" class="col-6 col-form-label">Line Pressure (barG)</label>
+          <div class="col-6">
+            <input type="text" class="form-control" id="linepressure2" placeholder="Line Pressure">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="ppmv2" class="col-6 col-form-label">PPM(v)</label>
+          <div class="col-6">
+            <input type="text" class="form-control" id="ppmv2" placeholder="PPM(v)">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="dewpoint2" class="col-6 col-form-label">Dew Point</label>
+          <div class="col-6">
+            <input type="text" class="form-control" id="dewpoint2" placeholder="Result">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-To convert dew point temperature to vapor pressure:
-
-$$
-e = 611.2 \times \exp\left(\frac{17.62 \times T}{243.12 + T}\right)
-$$
-
-Or if below 0°C:
-
-$$
-e = 611.2 \times \exp\left(\frac{22.46 \times T}{272.62 + T}\right)
-$$
-
----
-
-Additional calculations and scripts originally used in WordPress shortcodes (177, 211, 214, and 217) have been integrated directly via HTML and JavaScript above.
+<p>Additional calculations and scripts originally used in WordPress shortcodes (177, 211, 214, and 217) have been integrated directly via HTML and JavaScript above.</p>
 
